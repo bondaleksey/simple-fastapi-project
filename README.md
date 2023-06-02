@@ -55,7 +55,7 @@ pip install -e .
 ```
 Он запустит uvicorn c fastapi из файла service/main.py 
 ```
- ./create_model.sh
+ ./start.sh
 ```
 
 Результат можно наблюдать в `http://localhost:8000/docs`  
