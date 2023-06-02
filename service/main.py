@@ -2,13 +2,12 @@ from fastapi import FastAPI
 from recosys.models.serialize import load
 
 app = FastAPI()
-DATA = None
+DATA = {}
 
 
 @app.on_event("startup")
 def load_model():
-    global DATA
-    DATA = load()
+    DATA["load"] = load()
 
 
 @app.get("/")
@@ -18,4 +17,8 @@ def read_healthcheck():
 
 @app.post("/predict")
 def predict(user_id="123", course_id="333"):
-    return {"user_id": user_id, "course_id": course_id, "res": DATA.print_flower()}
+    return {
+        "user_id": user_id,
+        "course_id": course_id,
+        "res": DATA["load"].print_flower(),
+    }

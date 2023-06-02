@@ -5,6 +5,8 @@ class Flower:
         self.values = values
 
     def print_flower(self):
-        print(
+        output = (
             f"Here we have:\nname = {self.name}\nage={self.age}\nvalues={self.values}"
         )
+        print(output)
+        return output

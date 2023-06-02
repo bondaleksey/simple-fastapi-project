@@ -47,3 +47,13 @@ pip install -r requirements.txt
 ```
 pip install -e .
 ```
+
+### Для запуска надо использовать скрипты
+Он создаст дефолтный файл baseline.joblib в папке models
+```
+ ./create_model.sh
+```
+Он запустит uvicorn c fastapi из файла service/main.py 
+```
+ ./create_model.sh
+```
