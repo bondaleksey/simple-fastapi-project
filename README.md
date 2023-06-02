@@ -57,3 +57,5 @@ pip install -e .
 ```
  ./create_model.sh
 ```
+
+Результат можно наблюдать в `http://localhost:8000/docs`  
